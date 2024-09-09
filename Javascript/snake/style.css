@@ -1,0 +1,21 @@
+.board {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.step {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(10, 93, 248, 0.918);
+    
+}

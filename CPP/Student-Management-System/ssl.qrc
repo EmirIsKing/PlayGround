@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>mysql-ssl-ca-cert.pem</file>
+        <file>smssplashscreen.png</file>
+        <file>smsh.png</file>
+        <file>smsht.png</file>
+        <file>P.png</file>
+        <file>s.png</file>
+        <file>T.png</file>
+    </qresource>
+</RCC>

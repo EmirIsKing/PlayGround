@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeric Input</title>
+    <style>
+        .input-field {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <input
+        type="text"
+        id="numericInput"
+        class="input-field"
+        placeholder="Enter up to 6 digits and up to 2 decimals"
+    />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const input = document.getElementById('numericInput');
+
+            const handleChange = (e) => {
+                let inputValue = e.target.value;
+
+                // Regular expression to allow up to 6 digits before the decimal and up to 2 decimals
+                const regex = /^\d{0,6}(\.\d{0,2})?$/;
+
+                // If value exceeds the maximum digits or has more than 2 decimal places, adjust it
+                if (regex.test(inputValue)) {
+                    const parts = inputValue.split('.');
+                    
+                    // Handle case where there are more than 6 digits before the decimal
+                    if (parts[0].length > 6) {
+                        inputValue = parts[0].slice(0, 6) + (parts[1] ? '.' + parts[1] : '');
+                    }
+
+                    // Handle case where there are more than 2 decimal places
+                    if (parts[1] && parts[1].length > 2) {
+                        inputValue = parts[0] + '.' + parts[1].slice(0, 2);
+                    }
+
+                    e.target.value = inputValue; // Update input value if valid
+                } else {
+                    // Remove last character if invalid
+                    e.target.value = e.target.value.slice(0, -1);
+                }
+            };
+
+            input.addEventListener('input', handleChange);
+        });
+    </script>
+</body>
+</html>

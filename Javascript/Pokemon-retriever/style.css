@@ -1,0 +1,25 @@
+#fetchPokemon {
+    width: 70px;
+    height: 22px;
+}
+
+#pokemonimg {
+    display: inline-block;
+    margin-top: 10px;
+    width: 100px;
+}
+
+#pokemonInfo{
+    
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#info-container{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}

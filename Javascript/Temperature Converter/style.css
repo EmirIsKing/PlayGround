@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(219, 217, 217);
+    display: flex;
+    justify-content: center;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 350px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+#p-header {
+    font-family: Helvetica;
+    font-size: 1.5em;
+    color: rgb(14, 156, 238);
+}
+
+button {
+    background-color: rgb(245, 54, 54);
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 70px;
+}
+
+button:hover{
+    background-color: rgb(243, 80, 80);
+}
+
+button:active {
+    background-color: rgb(250, 121, 121);
+}
+
+p {
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+#result {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#convert-wrapper {
+    margin: 12px 0;
+
+}
+
+#convert-div {
+    margin-top: 0;
+}
+
+.convert {
+    margin: 0;
+    display: inline-block;
+}
+
